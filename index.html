@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquify Store - Home</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="loader-container">
+        <i data-lucide="shopping-bag" class="loader-icon"></i>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+        <span class="loader-text">Loading Liquify...</span>
+    </div>
+
+    <div id="app-wrapper" class="hidden">
+        <div class="background-blobs">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+        </div>
+
+        <header class="header">
+            <nav class="navbar">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon-bg"><i data-lucide="shopping-bag"></i></div>
+                    <span class="nav-logo-text">Liquify Store</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link active"><i data-lucide="home"></i> Home</a>
+                    <a href="products.html" class="nav-link"><i data-lucide="package"></i> Products</a>
+                    <a href="about.html" class="nav-link"><i data-lucide="user"></i> About Us</a>
+                </div>
+                <a href="cart.html" class="nav-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="cart-bubble">0</span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content fade-in">
+            <section class="hero">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span> New Arrivals 2025
+                    </div>
+                    <h1 class="hero-title">Technology<br>Made Fluid</h1>
+                    <p class="hero-desc">Experience the next generation of mobile devices. Seamless design, powerful performance, and crystal-clear displays.</p>
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary">Shop Now <i data-lucide="arrow-right"></i></a>
+                        <a href="about.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-glow"></div>
+                    <div class="glass-card hero-card">
+                        <img src="Assets/mogile.jpg" alt="Newest Phone" class="hero-img">
+                        <div class="hero-card-overlay">
+                            <p class="overlay-label">Featured</p>
+                            <p class="overlay-title">Aether Phone 1 Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section why-choose">
+                <div class="section-header center">
+                    <h2 class="section-title">Why Choose Liquify?</h2>
+                    <p class="section-subtitle">We provide the best experience for our customers.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="glass-card feature-card">
+                        <div class="icon-box blue"><i data-lucide="zap"></i></div>
+                        <h3>Island-wide Delivery</h3>
+                        <p>Get your new phone delivered securely to your doorstep, anywhere in Sri Lanka.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="icon-box purple"><i data-lucide="shield"></i></div>
+                        <h3>2-Year Warranty</h3>
+                        <p>Peace of mind guaranteed. Every device comes with a comprehensive 2-year manufacturer warranty.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="icon-box red"><i data-lucide="phone-call"></i></div>
+                        <h3>24/7 Expert Support</h3>
+                        <p>Our team of mobile experts is always here to help you with setup, issues, or general questions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section featured">
+                <div class="section-header between">
+                    <div>
+                        <h2 class="section-title">Trending Now</h2>
+                        <p class="section-subtitle">Top picks for this week</p>
+                    </div>
+                    <a href="products.html" class="text-link">View All <i data-lucide="arrow-right"></i></a>
+                </div>
+                <div id="featured-grid" class="grid-3"></div>
+            </section>
+
+            <section class="section collections">
+                <div class="section-header center">
+                    <h2 class="section-title">Explore Our Collections</h2>
+                </div>
+                <div class="grid-4">
+                    <a href="products.html" class="glass-card collection-card">
+                        <div class="col-icon yellow"><i data-lucide="award"></i></div>
+                        <h3>Flagships</h3>
+                        <p>Ultimate Performance</p>
+                        <span class="browse-link">Browse &rarr;</span>
+                    </a>
+                    <a href="products.html" class="glass-card collection-card">
+                        <div class="col-icon purple"><i data-lucide="book-open"></i></div>
+                        <h3>Foldables</h3>
+                        <p>Future Form Factors</p>
+                        <span class="browse-link">Browse &rarr;</span>
+                    </a>
+                    <a href="products.html" class="glass-card collection-card">
+                        <div class="col-icon red"><i data-lucide="gamepad-2"></i></div>
+                        <h3>Gaming</h3>
+                        <p>Unleash Power</p>
+                        <span class="browse-link">Browse &rarr;</span>
+                    </a>
+                    <a href="products.html" class="glass-card collection-card">
+                        <div class="col-icon green"><i data-lucide="dollar-sign"></i></div>
+                        <h3>Budget</h3>
+                        <p>Value for Money</p>
+                        <span class="browse-link">Browse &rarr;</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section reviews">
+                <div class="section-header center">
+                    <h2 class="section-title">Customer Reviews</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="glass-card review-card">
+                        <div class="stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i></div>
+                        <p class="review-text">"Best place to buy phones in Sri Lanka. Delivery was super fast to Kandy!"</p>
+                        <div class="reviewer">
+                            <div class="avatar blue">K</div>
+                            <div><h4>Kamal Perera</h4><p>Tech Enthusiast</p></div>
+                        </div>
+                    </div>
+                    <div class="glass-card review-card">
+                        <div class="stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i></div>
+                        <p class="review-text">"Loved the glass UI of the site, and the phone arrived in perfect condition."</p>
+                        <div class="reviewer">
+                            <div class="avatar purple">S</div>
+                            <div><h4>Sarah Silva</h4><p>Verified Buyer</p></div>
+                        </div>
+                    </div>
+                    <div class="glass-card review-card">
+                        <div class="stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star"></i></div>
+                        <p class="review-text">"Got my ROG phone here. Genuine warranty and great customer service."</p>
+                        <div class="reviewer">
+                            <div class="avatar red">N</div>
+                            <div><h4>Nimali Fernando</h4><p>Mobile Gamer</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section newsletter">
+                <div class="newsletter-card">
+                    <div class="newsletter-bg"></div>
+                    <div class="newsletter-content">
+                        <i data-lucide="mail" class="news-icon"></i>
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p>Get the latest updates on new phone releases and exclusive deals.</p>
+                        <div class="news-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="btn btn-white">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="nav-logo">
+                            <i data-lucide="shopping-bag" style="color: #60a5fa;"></i>
+                            <span class="nav-logo-text">Liquify Store</span>
+                        </div>
+                        <p>Your premium destination for next-gen mobile technology.</p>
+                    </div>
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i data-lucide="twitter"></i></a>
+                            <a href="#"><i data-lucide="facebook"></i></a>
+                            <a href="#"><i data-lucide="instagram"></i></a>
+                            <a href="#"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Liquify Store. All rights reserved. Designed in Sri Lanka.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

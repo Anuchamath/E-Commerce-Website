@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liquify Store - Checkout</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+     <div class="loader-container">
+        <i data-lucide="shopping-bag" class="loader-icon"></i>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+        <span class="loader-text">Secure Checkout...</span>
+    </div>
+
+    <div id="app-wrapper" class="hidden">
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <header class="header">
+             <nav class="navbar">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon-bg"><i data-lucide="shopping-bag"></i></div>
+                    <span class="nav-logo-text">Liquify Store</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link"><i data-lucide="home"></i> Home</a>
+                    <a href="products.html" class="nav-link"><i data-lucide="package"></i> Products</a>
+                    <a href="about.html" class="nav-link"><i data-lucide="user"></i> About Us</a>
+                </div>
+                <a href="cart.html" class="nav-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="cart-bubble">0</span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content fade-in">
+            <h1 class="page-title">Checkout</h1>
+            <div class="glass-card checkout-container">
+                <form id="checkout-form">
+                    <h2 class="form-title"><i data-lucide="user"></i> Shipping Information</h2>
+                    <div class="form-row">
+                        <input type="text" class="form-input" placeholder="First Name" required>
+                        <input type="text" class="form-input" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" class="form-input full" placeholder="Email Address" required>
+                    <input type="text" class="form-input full" placeholder="Street Address" required>
+                    <div class="form-row three">
+                        <input type="text" class="form-input" placeholder="City" required>
+                        <input type="text" class="form-input" placeholder="Province" required>
+                        <input type="text" class="form-input" placeholder="Postal Code" required>
+                    </div>
+
+                    <h2 class="form-title mt-8"><i data-lucide="credit-card"></i> Payment (Demo)</h2>
+                    <input type="text" class="form-input full" placeholder="Card Number" value="1234 5678 9012 3456">
+                    <div class="form-row">
+                        <input type="text" class="form-input" placeholder="MM/YY" value="12/25">
+                        <input type="text" class="form-input" placeholder="CVC" value="123">
+                    </div>
+
+                    <div class="checkout-total-box">
+                        <span>Total to Pay:</span>
+                        <span id="checkout-total-amount">LKR 0.00</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-green full">Place Order</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

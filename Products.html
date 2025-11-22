@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liquify Store - All Products</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="loader-container">
+        <i data-lucide="shopping-bag" class="loader-icon"></i>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+        <span class="loader-text">Loading Store...</span>
+    </div>
+
+    <div id="app-wrapper" class="hidden">
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <header class="header">
+            <nav class="navbar">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon-bg"><i data-lucide="shopping-bag"></i></div>
+                    <span class="nav-logo-text">Liquify Store</span>
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link"><i data-lucide="home"></i> Home</a>
+                    <a href="products.html" class="nav-link active"><i data-lucide="package"></i> Products</a>
+                    <a href="about.html" class="nav-link"><i data-lucide="user"></i> About Us</a>
+                </div>
+                <a href="cart.html" class="nav-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="cart-bubble">0</span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content fade-in">
+            <h1 class="page-title">All Products</h1>
+            <div id="all-products-grid" class="grid-3"></div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="nav-logo">
+                            <i data-lucide="shopping-bag" style="color: #60a5fa;"></i>
+                            <span class="nav-logo-text">Liquify Store</span>
+                        </div>
+                        <p>Your premium destination for next-gen mobile technology.</p>
+                    </div>
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i data-lucide="twitter"></i></a>
+                            <a href="#"><i data-lucide="facebook"></i></a>
+                            <a href="#"><i data-lucide="instagram"></i></a>
+                            <a href="#"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Liquify Store. All rights reserved. Designed in Sri Lanka.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
