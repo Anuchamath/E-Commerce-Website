@@ -1,4 +1,5 @@
-Name S.K Anuchamath Sathsare
+Name S.K Anuchamath Sathsarae
+
 School = St.Sylvester's College
 
 1. Project Purpose & Overview
