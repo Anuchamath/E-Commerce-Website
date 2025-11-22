@@ -2,14 +2,14 @@ Name S.K Anuchamath Sathsare
 School = St.Sylvester's College
 
 1. Project Purpose & Overview
-                This project is a fully functional, front-end e-commerce website developed for "Liquify Store," a futuristic mobile phone retailer. It was built to fulfill the competition         requirements for a creative, responsive, and user-friendly web application.
+     This project is a fully functional, front-end e-commerce website developed for "Liquify Store," a futuristic mobile phone retailer. It was built to fulfill the competition         requirements for a creative, responsive, and user-friendly web application.
 
 2. Technologies Used
+
                 HTML5
                 CSS3
                 JavaScript (ES6+)
-
-(No frameworks used)
+              (No frameworks used)
 
 3.Citations & Open Source Libraries
 
