@@ -96,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const path = window.location.pathname;
 
-    if (path.includes('index.html') || path.endsWith('/')) {
+    // 1. Home Page Logic
+    // Checks for index.html OR if the path is just "/" OR empty
+    if (path.includes('index') || path === '/' || path.endsWith('/')) {
         const grid = document.getElementById('featured-grid');
         if (grid) {
             grid.innerHTML = PRODUCTS.slice(0, 3).map(createProductCard).join('');
@@ -104,7 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (path.includes('products.html')) {
+    // 2. Products Page Logic
+    // CHANGED: Checks for 'products' keyword instead of 'products.html'
+    // This works for /products.html AND /products
+    if (path.includes('products')) {
         const grid = document.getElementById('all-products-grid');
         if (grid) {
             grid.innerHTML = PRODUCTS.map(createProductCard).join('');
@@ -112,7 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (path.includes('product.html')) {
+    // 3. Product Detail Logic
+    // CHANGED: Checks for 'product' (singular) BUT NOT 'products' (plural)
+    // This prevents it from running on the products page
+    else if (path.includes('product')) { 
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
         const product = PRODUCTS.find(p => p.id == id);
@@ -145,10 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 4. Cart Logic
     if (path.includes('cart')) {
         renderCart();
     }
 
+    // 5. Checkout Logic
     if (path.includes('checkout')) {
         const totalEl = document.getElementById('checkout-total-amount');
         if(totalEl) totalEl.textContent = formatPrice(getCartTotal());
