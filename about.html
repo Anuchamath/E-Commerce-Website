@@ -6,12 +6,11 @@
     <title>Liquify Store - About Us</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
     <link rel="stylesheet" href="style.css">
-    
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="loader" class="loader-container">
+    <div class="loader-container">
         <i data-lucide="shopping-bag" class="loader-icon"></i>
         <div class="loader-bar">
             <div class="loader-progress"></div>
@@ -19,7 +18,7 @@
         <span class="loader-text">Loading About...</span>
     </div>
 
-    <div id="app-wrapper" class="hidden" style="display: none;">
+    <div id="app-wrapper" class="hidden">
         <div class="background-blobs">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
@@ -32,6 +31,7 @@
                     <div class="logo-icon-bg"><i data-lucide="shopping-bag"></i></div>
                     <span class="nav-logo-text">Liquify Store</span>
                 </a>
+                <button class="menu-toggle" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link"><i data-lucide="home"></i> Home</a>
                     <a href="products.html" class="nav-link"><i data-lucide="package"></i> Products</a>
@@ -57,53 +57,63 @@
                     <h2 class="card-title">Our Story</h2>
                     <p class="text-gray">Founded in 2024 by a team of tech enthusiasts in Sri Lanka, Liquify Store started as a small blog. We saw a gap in the market for a store that wasn't just a store, but a hub for innovation.</p>
                 </div>
-                <img src="Assets/devlope team.png" alt="Liquify Store Team Photo" class="rounded-img shadow">
+                <img src="Assets/devlope team.png" class="rounded-img shadow">
             </div>
 
             <div class="glass-card p-6">
                 <h2 class="card-title center">Meet the Team</h2>
                 <div class="grid-3 team-grid">
                      <div class="team-card">
-                        <img src="Assets/developer 1.jpeg" alt="Alex Chen CEO" class="avatar-lg">
+                        <img src="Assets/developer 1.jpeg" class="avatar-lg">
                         <h4>S.K Anuchamath Sathsare</h4>
                         <p class="text-blue">Founder & CEO</p>
                      </div>
                      <div class="team-card">
-                        <img src="Assets/developer 2.jpeg" alt="Maria Garcia CTO" class="avatar-lg">
+                        <img src="Assets/developer 2.jpeg" class="avatar-lg">
                         <h4>Mr Unknow</h4>
                         <p class="text-purple">CTO</p>
                      </div>
                      <div class="team-card">
-                        <img src="Assets/developer 3.jpeg" alt="David Kim COO" class="avatar-lg">
+                        <img src="Assets/developer 3.jpeg" class="avatar-lg">
                         <h4>David Kim</h4>
                         <p class="text-red">COO</p>
                      </div>
                 </div>
             </div>
         </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="nav-logo">
+                            <i data-lucide="shopping-bag" style="color: #60a5fa;"></i>
+                            <span class="nav-logo-text">Liquify Store</span>
+                        </div>
+                        <p>Your premium destination for next-gen mobile technology.</p>
+                    </div>
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i data-lucide="twitter"></i></a>
+                            <a href="#"><i data-lucide="facebook"></i></a>
+                            <a href="#"><i data-lucide="instagram"></i></a>
+                            <a href="#"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Liquify Store. All rights reserved. Designed in Sri Lanka.</p>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            lucide.createIcons();
-
-        
-            const loader = document.getElementById('loader');
-            const app = document.getElementById('app-wrapper');
-
-            setTimeout(() => {
-                loader.style.opacity = '0'; 
-                setTimeout(() => {
-                    loader.style.display = 'none'; 
-                    app.style.display = 'block';   
-                 
-                    setTimeout(() => {
-                        app.classList.remove('hidden');
-                    }, 50);
-                }, 500);
-            }, 1500); 
-        });
-    </script>
 </body>
 </html>
