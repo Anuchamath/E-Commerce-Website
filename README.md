@@ -9,7 +9,7 @@ School = St.Sylvester's College
 
                 HTML5
                 CSS3
-                JavaScript (ES6+)
+                JavaScript 
               (No frameworks used)
 
 3.Citations & Open Source Libraries
