@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liquify Store - All Products</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
     <link rel="stylesheet" href="style.css">
@@ -9,6 +10,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Loading Screen -->
     <div class="loader-container">
         <i data-lucide="shopping-bag" class="loader-icon"></i>
         <div class="loader-bar">
@@ -18,23 +20,30 @@
     </div>
 
     <div id="app-wrapper" class="hidden">
+        <!-- Animated Background -->
         <div class="background-blobs">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
         </div>
 
+        <!-- Header -->
         <header class="header">
             <nav class="navbar">
                 <a href="index.html" class="nav-logo">
                     <div class="logo-icon-bg"><i data-lucide="shopping-bag"></i></div>
                     <span class="nav-logo-text">Liquify Store</span>
                 </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="mobile-menu-btn"><i data-lucide="menu"></i></button>
+                
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link"><i data-lucide="home"></i> Home</a>
                     <a href="products.html" class="nav-link active"><i data-lucide="package"></i> Products</a>
                     <a href="about.html" class="nav-link"><i data-lucide="user"></i> About Us</a>
                 </div>
+                
                 <a href="cart.html" class="nav-cart">
                     <i data-lucide="shopping-cart"></i>
                     <span id="cart-count" class="cart-bubble">0</span>
@@ -42,11 +51,15 @@
             </nav>
         </header>
 
+        <!-- Main Content -->
         <main class="main-content fade-in">
             <h1 class="page-title">All Products</h1>
+            
+            <!-- Products Grid (Populated by script.js) -->
             <div id="all-products-grid" class="grid-3"></div>
         </main>
 
+        <!-- Footer -->
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-grid">
