@@ -75,9 +75,27 @@ function createProductCard(product) {
     </div>`;
 }
 
+// --- Newsletter Logic (New) ---
+function handleNewsletter() {
+    const newsBtn = document.querySelector('.news-form button');
+    const newsInput = document.querySelector('.news-form input');
+    
+    if (newsBtn && newsInput) {
+        newsBtn.addEventListener('click', () => {
+            if (newsInput.value.trim() !== "") {
+                alert("Thank you for subscribing to our newsletter!");
+                newsInput.value = "";
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
     updateCartCount();
+    handleNewsletter(); // Initialize newsletter
 
     setTimeout(() => {
         const loader = document.querySelector('.loader-container');
@@ -96,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const path = window.location.pathname;
 
-    // 1. Home Page Logic
-    // Checks for index.html OR if the path is just "/" OR empty
+    // Home Page Logic
     if (path.includes('index') || path === '/' || path.endsWith('/')) {
         const grid = document.getElementById('featured-grid');
         if (grid) {
@@ -106,9 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 2. Products Page Logic
-    // CHANGED: Checks for 'products' keyword instead of 'products.html'
-    // This works for /products.html AND /products
+    // Products Page Logic
     if (path.includes('products')) {
         const grid = document.getElementById('all-products-grid');
         if (grid) {
@@ -117,9 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 3. Product Detail Logic
-    // CHANGED: Checks for 'product' (singular) BUT NOT 'products' (plural)
-    // This prevents it from running on the products page
+    // Product Detail Logic
     else if (path.includes('product')) { 
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
@@ -153,12 +166,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 4. Cart Logic
+    // Cart Logic
     if (path.includes('cart')) {
         renderCart();
     }
 
-    // 5. Checkout Logic
+    // Checkout Logic
     if (path.includes('checkout')) {
         const totalEl = document.getElementById('checkout-total-amount');
         if(totalEl) totalEl.textContent = formatPrice(getCartTotal());
