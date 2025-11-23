@@ -86,9 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if(app) app.classList.remove('hidden');
     }, 1500);
 
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    if(menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+
     const path = window.location.pathname;
 
-    // Home Page Logic
     if (path.includes('index.html') || path.endsWith('/')) {
         const grid = document.getElementById('featured-grid');
         if (grid) {
@@ -97,8 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Products Page Logic
-    if (path.includes('products')) {
+    if (path.includes('products.html')) {
         const grid = document.getElementById('all-products-grid');
         if (grid) {
             grid.innerHTML = PRODUCTS.map(createProductCard).join('');
@@ -106,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Product Detail Logic
     if (path.includes('product.html')) {
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
@@ -140,12 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cart Logic - improved check
     if (path.includes('cart')) {
         renderCart();
     }
 
-    // Checkout Logic
     if (path.includes('checkout')) {
         const totalEl = document.getElementById('checkout-total-amount');
         if(totalEl) totalEl.textContent = formatPrice(getCartTotal());
